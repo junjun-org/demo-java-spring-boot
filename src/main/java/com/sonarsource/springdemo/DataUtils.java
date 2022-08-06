@@ -11,9 +11,7 @@ public class DataUtils {
     JdbcTemplate jdbcTemplate;
 
     public String getAddress(String name) {
-        String query = "SELECT address FROM people WHERE name = '" + name + "'";
-        String addr = jdbcTemplate.queryForObject(query, String.class);
-        addr = addr == null ? "" : addr.replace("STREET", "ST");
-        return addr;
+        String query = "SELECT address FROM people WHERE name = ?";
+        return jdbcTemplate.queryForObject(query, String.class, name);
     }      
 }

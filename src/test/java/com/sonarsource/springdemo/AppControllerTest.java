@@ -21,12 +21,6 @@ class AppControllerTest {
 	private MockMvc mockMvc;
 
 	@Test
-	void shouldReturnDefaultMessage() throws Exception {
-		this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
-				.andExpect(content().string(containsString("Hello, World")));
-	}
-
-	@Test
 	void shouldReturnAddress() throws Exception {
 		this.mockMvc.perform(get("/person/address?name=foo")).andExpect(status().isOk());
 	}

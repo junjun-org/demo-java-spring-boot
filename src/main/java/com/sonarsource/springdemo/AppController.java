@@ -16,6 +16,7 @@ public class AppController {
 
     @GetMapping("/person/address")
     public @ResponseBody String getAddress(@RequestParam String name) {
+        
         return du.getAddress(name);
     }
 

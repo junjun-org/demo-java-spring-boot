@@ -14,8 +14,8 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
-		<sonar.projectKey>com.sonarsource:spring-demo</sonar.projectKey>
-		<sonar.projectVersion>${project.version}</sonar.projectVersion>
+		<sonar.projectKey>junjun-org_demo-java-spring-boot</sonar.projectKey>
+		<sonar.projectVersion>0.0.1</sonar.projectVersion>
 	</properties>
 	<dependencies>
 		<dependency>

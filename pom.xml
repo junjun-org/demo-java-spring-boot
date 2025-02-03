@@ -15,6 +15,7 @@
 	<properties>
 		<java.version>11</java.version>
 		<sonar.projectKey>com.sonarsource:spring-demo</sonar.projectKey>
+		<sonar.projectVersion>${project.version}</sonar.projectVersion>
 	</properties>
 	<dependencies>
 		<dependency>

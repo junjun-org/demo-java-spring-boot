@@ -15,7 +15,7 @@
 	<properties>
 		<java.version>11</java.version>
 		<sonar.projectKey>junjun-org_demo-java-spring-boot</sonar.projectKey>
-		<sonar.projectVersion>0.0.1</sonar.projectVersion>
+		<sonar.projectVersion>0.0.1-SNAPSHOT</sonar.projectVersion>
 	</properties>
 	<dependencies>
 		<dependency>

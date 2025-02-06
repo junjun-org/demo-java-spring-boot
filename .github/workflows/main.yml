@@ -11,6 +11,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    environment: SonarQube Cloud
     steps:
       - uses: actions/checkout@v3
         with:
@@ -44,4 +45,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PR_GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn -B clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -DskipTests=true
+        run: |
+          echo "SonarQube URL: ${{ secrets.SONAR_HOST_URL }}"
+          mvn -B clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -DskipTests=true

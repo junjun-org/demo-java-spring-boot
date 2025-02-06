@@ -36,6 +36,8 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Set Up Maven
         run: mvn --version
+      - name: Debug SonarQube URL
+        run: echo "SonarQube URL: ${{ secrets.SONAR_HOST_URL }}"
       - name: Build and Analyze
         env:
           GITHUB_TOKEN: ${{ secrets.PR_GITHUB_TOKEN }}  # Needed to get PR information, if any

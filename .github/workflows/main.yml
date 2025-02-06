@@ -47,4 +47,4 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: |
           echo "SonarQube URL: ${{ secrets.SONAR_HOST_URL }}"
-          mvn -B clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -DskipTests=true
+          mvn -B clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar

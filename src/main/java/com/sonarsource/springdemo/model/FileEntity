@@ -1,0 +1,18 @@
+package com.sonarsource.springdemo.model;
+
+import javax.persistence.*;
+
+@Entity
+public class FileEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String fileName;
+
+    @Lob
+    private byte[] data;
+
+    // Getters and setters
+}

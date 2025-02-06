@@ -13,10 +13,10 @@
 	<name>Spring Boot App</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>21</java.version>
 		<sonar.projectKey>junjun-org_demo-java-spring-boot</sonar.projectKey>
 		<sonar.projectVersion>0.0.1</sonar.projectVersion>
-		<sonar.autodetect.ai.code>true</sonar.autodetect.ai.code>
+		<sonar.organization>junjun-org</sonar.organization>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -38,11 +38,15 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
 	</dependencies>
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>5.0.0.4389</version>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

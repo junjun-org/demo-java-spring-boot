@@ -1,0 +1,7 @@
+package com.sonarsource.springdemo.repository;
+
+import com.sonarsource.springdemo.model.FileEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface FileRepository extends JpaRepository<FileEntity, Long> {
+}

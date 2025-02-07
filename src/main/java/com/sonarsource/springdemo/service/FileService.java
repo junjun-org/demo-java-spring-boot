@@ -14,13 +14,17 @@ import com.sonarsource.springdemo.repository.FileRepository;
 @Transactional
 public class FileService {
 
-    @Autowired
-    private FileRepository fileRepository;
+	public FileService() {
+		System.out.println("constructor");
+	}
 
-    public void saveFile(MultipartFile file) throws IOException {
-        FileEntity fileEntity = new FileEntity();
-        fileEntity.setFileName(file.getOriginalFilename());
-        fileEntity.setData(file.getBytes());
-        fileRepository.save(fileEntity);
-    }
+	@Autowired
+	private FileRepository fileRepository;
+
+	public void saveFile(MultipartFile file) throws IOException {
+		FileEntity fileEntity = new FileEntity();
+		fileEntity.setFileName(file.getOriginalFilename());
+		fileEntity.setData(file.getBytes());
+		fileRepository.save(fileEntity);
+	}
 }

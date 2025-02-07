@@ -18,7 +18,7 @@
 		<maven.compiler.source>21</maven.compiler.source>
 		<maven.compiler.target>21</maven.compiler.target>
 		<sonar.projectKey>junjun-org_demo-java-spring-boot</sonar.projectKey>
-		<sonar.projectVersion>0.0.1</sonar.projectVersion>
+		<sonar.projectVersion>0.0.1-SNAPSHOT</sonar.projectVersion>
 		<sonar.organization>junjun-org</sonar.organization>
 	</properties>
 	<dependencies>

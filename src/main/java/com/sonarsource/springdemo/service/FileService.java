@@ -1,14 +1,17 @@
 package com.sonarsource.springdemo.service;
 
-import com.sonarsource.springdemo.model.FileEntity;
-import com.sonarsource.springdemo.repository.FileRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-
 import java.io.IOException;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.sonarsource.springdemo.model.FileEntity;
+import com.sonarsource.springdemo.repository.FileRepository;
+
 @Service
+@Transactional
 public class FileService {
 
     @Autowired
